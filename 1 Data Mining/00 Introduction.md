@@ -1,4 +1,4 @@
-## 00 Introduction
+## 0 Introduction
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 📊 Data Mining Definition and Purpose  
 - Data mining is the extraction of interesting, non-trivial, implicit, previously unknown, and potentially useful patterns or knowledge from large datasets.  
@@ -52,10 +50,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 📊 What is Data Mining and Why Is It Important?
 
@@ -219,11 +213,10 @@ Data mining is the automated process of discovering meaningful patterns and know
 *Reference: Data Mining: Concepts and Techniques, 3rd ed. by Jiawei Han, Micheline Kamber, and Jian Pei*
 
 
+
 <br>
 
 ## Questions
-
-
 
 #### 1. What distinguishes data mining from simple database querying or search?  
 A) Data mining extracts implicit and previously unknown patterns.  
@@ -350,8 +343,6 @@ D) Logistic regression and rule-based classification
 <br>
 
 ## Answers
-
-
 
 #### 1. What distinguishes data mining from simple database querying or search?  
 A) ✓ Data mining extracts implicit and previously unknown patterns, unlike simple queries.  
@@ -531,4 +522,3 @@ C) ✗ Clustering and association rule mining are not classification techniques.
 D) ✓ Logistic regression and rule-based classification are classification methods.
 
 **Correct:** A, B, D
-

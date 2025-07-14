@@ -1,4 +1,4 @@
-## 07 Outlier Detection
+## 7 Outlier Detection
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🌟 Outlier Types  
 - There are three types of outliers: global (point anomalies), contextual, and collective outliers.  
@@ -71,10 +69,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🌟 Introduction to Outlier Detection
 
@@ -243,8 +237,6 @@ Understanding the nature of your data and the context of outliers is essential f
 
 ## Questions
 
-
-
 #### 1. Which of the following statements correctly distinguish outliers from noise?  
 A) Noise is random error or variance, while outliers violate the normal data generation process.  
 B) Outliers are always errors in data measurement, noise is not.  
@@ -389,8 +381,6 @@ D) Larger Mahalanobis distance indicates a more outlying point.
 <br>
 
 ## Answers
-
-
 
 #### 1. Which of the following statements correctly distinguish outliers from noise?  
 A) ✓ Noise is random error or variance, while outliers violate the normal data generation process.  
@@ -570,4 +560,3 @@ C) ✗ It does not treat dimensions independently.
 D) ✓ Larger distance indicates more outlying.
 
 **Correct:** A, B, D
-

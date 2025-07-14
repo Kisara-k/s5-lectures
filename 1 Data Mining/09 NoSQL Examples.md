@@ -1,4 +1,4 @@
-## 09 NoSQL Examples
+## 9 NoSQL Examples
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🚀 NoSQL Movement
 - NoSQL databases address the need for greater scalability, throughput, and response time.
@@ -74,10 +72,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🚀 The NoSQL Movement: Why NoSQL?
 
@@ -297,8 +291,6 @@ Understanding these systems involves grasping their data models, how they handle
 
 ## Questions
 
-
-
 #### 1. Which of the following are reasons behind the rise of the NoSQL movement?  
 A) Need for schema rigidity and strict normalization  
 B) Preference for open-source software  
@@ -417,15 +409,13 @@ D) It controls replication between nodes
 A) A batch can contain writes to multiple collections  
 B) A batch can contain more than 1000 documents  
 C) Batch writes are atomic; either all succeed or none do  
-D) Batch writes can only update existing documents, not create new ones  
+D) Batch writes can only update existing documents, not create new ones
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. Which of the following are reasons behind the rise of the NoSQL movement?  
 A) ✗ NoSQL favors schema flexibility, not rigidity.  
@@ -605,4 +595,3 @@ C) ✓ Batch writes are atomic; all succeed or none do.
 D) ✗ Batches can create new documents, not just update.  
 
 **Correct:** A, C, D
-

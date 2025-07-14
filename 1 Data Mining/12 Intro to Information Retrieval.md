@@ -8,8 +8,6 @@
 
 ### Key Points
 
-
-
 #### 1. 🔍 Definition of Information Retrieval (IR)
 - IR is the activity of obtaining information resources relevant to an information need from a collection of information resources.
 - IR typically deals with unstructured data such as text, images, audio, and video.
@@ -77,10 +75,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🌟 What is Information Retrieval?
 
@@ -227,8 +221,6 @@ For those interested in diving deeper into IR, here are some foundational textbo
 
 ## Questions
 
-
-
 #### 1. What best describes the primary goal of Information Retrieval (IR)?  
 A) To store all available data in a structured database  
 B) To find relevant information resources that satisfy a user’s information need  
@@ -347,15 +339,13 @@ D) To store user feedback for improving search results
 A) IR combines techniques from databases, NLP, machine learning, and human-computer interaction  
 B) IR is purely a subfield of library science with no relation to computer science  
 C) Advances in NLP directly contribute to improvements in IR systems  
-D) IR research is isolated and does not benefit from other fields  
+D) IR research is isolated and does not benefit from other fields
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. What best describes the primary goal of Information Retrieval (IR)?  
 A) ✗ Storing data is not the primary goal; IR focuses on finding relevant info.  
@@ -535,4 +525,3 @@ C) ✓ Advances in NLP improve IR systems.
 D) ✗ IR research benefits greatly from other fields and is not isolated.  
 
 **Correct:** A, C
-

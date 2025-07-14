@@ -1,4 +1,4 @@
-## 01 Concepts and Techniques
+## 1 Concepts and Techniques
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🧩 Data Objects and Attributes  
 - A data object represents an entity and is described by attributes.  
@@ -64,10 +62,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 📊 Understanding Data Objects and Attribute Types
 
@@ -269,8 +263,6 @@ To analyze data, especially for clustering or classification, we need to measure
 
 ## Questions
 
-
-
 #### 1. Which of the following statements about data objects and attributes are true?  
 A) Data objects represent entities and are described by attributes.  
 B) Attributes correspond to rows in a database table.  
@@ -396,8 +388,6 @@ D) Q-Q plots compare quantiles of two distributions to detect shifts or differen
 <br>
 
 ## Answers
-
-
 
 #### 1. Which of the following statements about data objects and attributes are true?  
 A) ✓ Data objects represent entities and are described by attributes.  
@@ -577,4 +567,3 @@ C) ✗ Scatter plots are for bivariate data, not univariate.
 D) ✓ Q-Q plots compare quantiles of two distributions to detect shifts.
 
 **Correct:** A, B, D
-

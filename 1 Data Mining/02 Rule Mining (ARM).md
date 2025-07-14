@@ -1,4 +1,4 @@
-## 02 Rule Mining (ARM)
+## 2 Rule Mining (ARM)
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🔑 Frequent Pattern and Association Rule Basics  
 - A *frequent pattern* is a set of items or subsequences that appear frequently in a dataset.  
@@ -59,10 +57,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🔍 Introduction to Rule Mining and Frequent Pattern Analysis
 
@@ -233,8 +227,6 @@ This approach makes mining interactive and efficient by pruning irrelevant patte
 
 ## Questions
 
-
-
 #### 1. What does the *downward closure property* in frequent pattern mining imply?  
 A) If an itemset is frequent, all its supersets must also be frequent.  
 B) If an itemset is infrequent, all its supersets must also be infrequent.  
@@ -379,8 +371,6 @@ D) ARM cannot be used for classification or clustering tasks.
 <br>
 
 ## Answers
-
-
 
 #### 1. What does the *downward closure property* in frequent pattern mining imply?  
 A) ✗ If an itemset is frequent, all its supersets must also be frequent. (Incorrect: supersets can be less frequent.)  
@@ -560,4 +550,3 @@ C) ✓ ARM can assist in DNA sequence pattern discovery. (Correct: bioinformatic
 D) ✗ ARM cannot be used for classification or clustering tasks. (Incorrect: ARM supports associative classification and clustering.)
 
 **Correct:** A, C
-

@@ -1,4 +1,4 @@
-## 04 Time Series Part 2
+## 4 Time Series Part 2
 
 [Study Notes](#study-notes)
 
@@ -60,8 +60,6 @@
 <br>
 
 ## Study Notes
-
-
 
 ### 1. 🔄 Understanding Autocorrelation and Partial Autocorrelation
 
@@ -219,6 +217,8 @@ This lecture covered advanced concepts in time series analysis, focusing on:
 
 These concepts form the foundation for analyzing, forecasting, and mining time series data effectively.
 
+
+
 <br>
 
 ## Questions
@@ -361,6 +361,8 @@ A) PACF can help identify the order \( p \) of an AR model.
 B) PACF values at lag \( k \) represent the correlation between \( X_t \) and \( X_{t-k} \) after removing effects of lags 1 to \( k-1 \).  
 C) PACF is useful for identifying the order \( q \) of an MA model.  
 D) PACF values are always positive.
+
+
 
 <br>
 

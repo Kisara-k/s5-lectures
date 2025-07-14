@@ -1,4 +1,4 @@
-## 05 Clustering
+## 5 Clustering
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🧩 Cluster Analysis Basics  
 - A cluster is a group of data objects similar within the group and dissimilar to objects in other groups.  
@@ -56,17 +54,13 @@
 - Cross-validation splits data to test clustering quality for different k values.  
 - Extrinsic evaluation compares clustering to ground truth (e.g., BCubed precision/recall).  
 - Intrinsic evaluation uses measures like silhouette coefficient to assess cluster compactness and separation.  
-- Good clustering quality criteria: homogeneity, completeness, rag bag penalty, small cluster preservation.  
+- Good clustering quality criteria: homogeneity, completeness, rag bag penalty, small cluster preservation.
 
 
 
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🧩 What is Cluster Analysis? Basic Concepts
 
@@ -287,8 +281,6 @@ Choosing the right clustering method depends on data characteristics, applicatio
 
 ## Questions
 
-
-
 #### 1. What defines a cluster in cluster analysis?  
 A) A group of data points with high similarity within the group and low similarity to points outside the group  
 B) A group of data points with identical values  
@@ -407,15 +399,13 @@ D) The point farthest from the cluster centroid
 A) Scalability to large datasets  
 B) Handling mixed data types (numerical, categorical, ordinal)  
 C) Discovering clusters with arbitrary shapes  
-D) Ensuring clusters are always convex and spherical  
+D) Ensuring clusters are always convex and spherical
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. What defines a cluster in cluster analysis?  
 A) ✓ A group of data points with high similarity within the group and low similarity to points outside the group  
@@ -595,4 +585,3 @@ C) ✓ Discovering clusters with arbitrary shapes requires advanced methods
 D) ✗ Clusters are not always convex or spherical; many methods struggle with non-convex shapes  
 
 **Correct:** A, B, C
-

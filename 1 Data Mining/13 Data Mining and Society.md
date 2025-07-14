@@ -8,8 +8,6 @@
 
 ### Key Points
 
-
-
 #### 1. 💰 Financial Data Mining  
 - Financial data in banks is often complete, reliable, and high quality.  
 - Data warehouses enable multidimensional analysis by month, region, sector, etc.  
@@ -55,17 +53,13 @@
 - Trends include application-specific mining, scalable and interactive methods, and integration with web, cloud, and database systems.  
 - Mining complex data types like social networks, spatiotemporal data, multimedia, and biomedical data is growing.  
 - Real-time data stream mining and distributed mining are important research areas.  
-- Privacy protection and security remain critical challenges in data mining development.  
+- Privacy protection and security remain critical challenges in data mining development.
 
 
 
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 📊 Introduction to Data Mining and Its Applications
 
@@ -230,8 +224,6 @@ These trends highlight data mining as a strategic, promising field with wide-rea
 
 ## Questions
 
-
-
 #### 1. Which of the following are common challenges when applying generic data mining methods to domain-specific applications?  
 A) Lack of domain knowledge integration  
 B) Scalability issues with large datasets  
@@ -369,15 +361,13 @@ D) To replace human decision-making entirely
 A) Data mining has no impact on privacy or security concerns  
 B) Data mining can raise ethical issues related to unconstrained access to personal data  
 C) Data mining is only used for scientific purposes and does not affect society  
-D) Privacy-preserving techniques are irrelevant to social concerns  
+D) Privacy-preserving techniques are irrelevant to social concerns
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. Which of the following are common challenges when applying generic data mining methods to domain-specific applications?  
 A) ✓ Lack of domain knowledge integration — Domain knowledge is crucial for effective application.  
@@ -557,4 +547,3 @@ C) ✗ Data mining is only used for scientific purposes and does not affect soci
 D) ✗ Privacy-preserving techniques are irrelevant to social concerns — They are highly relevant.
 
 **Correct:** B
-

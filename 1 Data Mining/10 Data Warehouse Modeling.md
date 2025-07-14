@@ -8,8 +8,6 @@
 
 ### Key Points
 
-
-
 #### 1. 🏗️ Data Warehouse Definition  
 - A data warehouse is a subject-oriented, integrated, time-variant, and nonvolatile collection of data supporting management’s decision-making.  
 - It is maintained separately from operational databases.  
@@ -65,17 +63,13 @@
 #### 11. 🖥️ OLAP Server Architectures  
 - **ROLAP:** Uses relational databases and SQL for OLAP queries; scalable for large data.  
 - **MOLAP:** Uses multidimensional array storage for fast access to pre-aggregated data.  
-- **HOLAP:** Hybrid approach combining ROLAP and MOLAP advantages.  
+- **HOLAP:** Hybrid approach combining ROLAP and MOLAP advantages.
 
 
 
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🏗️ What is a Data Warehouse? — The Foundation for Decision Making
 
@@ -269,8 +263,6 @@ This comprehensive approach enables businesses to make informed, data-driven dec
 
 ## Questions
 
-
-
 #### 1. Which of the following characteristics best define a data warehouse?  
 A) Subject-oriented, volatile, integrated, time-variant  
 B) Subject-oriented, integrated, time-variant, nonvolatile  
@@ -389,15 +381,13 @@ D) Dice aggregates data to a higher level of hierarchy
 A) Operational databases are subject-oriented; data warehouses are application-oriented  
 B) Operational databases contain current, detailed data; data warehouses contain historical, summarized data  
 C) Operational databases support transaction processing; data warehouses support complex queries and analysis  
-D) Operational databases are optimized for read-only access; data warehouses are optimized for frequent updates  
+D) Operational databases are optimized for read-only access; data warehouses are optimized for frequent updates
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. Which of the following characteristics best define a data warehouse?  
 A) ✗ Volatile is incorrect; data warehouses are nonvolatile.  
@@ -577,4 +567,3 @@ C) ✓ Correct: Operational DBs support transaction processing; warehouses suppo
 D) ✗ Operational DBs are optimized for updates; warehouses are optimized for read-only complex queries.  
 
 **Correct:** B, C
-

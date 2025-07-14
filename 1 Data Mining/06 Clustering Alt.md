@@ -1,4 +1,4 @@
-## 06 Clustering Alt
+## 6 Clustering Alt
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🧩 Cluster Analysis Basics
 - A cluster is a collection of data objects similar within the same group and dissimilar to objects in other groups.
@@ -80,10 +78,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🧩 What is Cluster Analysis?
 
@@ -319,8 +313,6 @@ Evaluating clustering results is crucial but challenging because clustering is u
 
 ## Questions
 
-
-
 #### 1. What are the essential characteristics of a good clustering result?  
 A) High intra-cluster similarity and low inter-cluster similarity  
 B) Clusters must be of equal size  
@@ -439,15 +431,13 @@ D) Outliers always form their own clusters in hierarchical clustering
 A) Using multiple random initializations and choosing the best result  
 B) Applying k-modes for categorical data instead of k-means  
 C) Increasing k arbitrarily to reduce within-cluster variance  
-D) Normalizing data to ensure all features contribute equally  
+D) Normalizing data to ensure all features contribute equally
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. What are the essential characteristics of a good clustering result?  
 A) ✓ High intra-cluster similarity and low inter-cluster similarity — This is the fundamental definition of good clustering.  
@@ -627,4 +617,3 @@ C) ✗ Increasing k arbitrarily to reduce within-cluster variance — Increasing
 D) ✓ Normalizing data to ensure all features contribute equally — Prevents dominance of features with large scales.  
 
 **Correct:** A, B, D
-

@@ -8,8 +8,6 @@
 
 ### Key Points
 
-
-
 #### 1. 🧊 Data Cube Structure  
 - A data cube is a lattice of cuboids representing aggregates at different dimensionalities.  
 - The apex cuboid is 0-D (total aggregate), and the base cuboid is full dimensionality (all dimensions).  
@@ -51,10 +49,6 @@
 <br>
 
 ## Study Notes
-
-
-
-
 
 ### 1. 🧊 What is a Data Cube? — Introduction to Multidimensional Data Analysis
 
@@ -168,8 +162,6 @@ Data cubes are not just for simple aggregation; they enable advanced analysis an
 <br>
 
 ## Questions
-
-
 
 #### 1. What does a data cube primarily represent in multidimensional data analysis?  
 A) A flat table with aggregated data for one dimension  
@@ -308,15 +300,13 @@ D) Ignoring cells with low measure values to reduce cube size
 A) To maximize the number of cuboids computed  
 B) To encourage pruning and reduce computation cost  
 C) To ensure all cuboids have equal size  
-D) To avoid computing iceberg cubes  
+D) To avoid computing iceberg cubes
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. What does a data cube primarily represent in multidimensional data analysis?  
 A) ✗ A flat table with aggregated data for one dimension only; data cube involves multiple dimensions.  
@@ -496,4 +486,3 @@ C) ✗ Cuboids rarely have equal size; ordering is for efficiency, not equal siz
 D) ✗ Ordering does not avoid iceberg cubes; it complements pruning strategies.  
 
 **Correct:** B
-

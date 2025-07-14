@@ -1,4 +1,4 @@
-## 03 Time Series Part 1
+## 3 Time Series Part 1
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 📅 Definition of Time Series  
 - A time series is an ordered sequence of values of a variable, usually at equally spaced time intervals.  
@@ -59,18 +57,13 @@
 
 #### 10. 🧪 Practical Tools  
 - The Python **statsmodels** package provides functions for seasonal decomposition and stationarity tests.  
-- Autocorrelation plots and spectral density plots are essential for detecting seasonality and cycles.  
+- Autocorrelation plots and spectral density plots are essential for detecting seasonality and cycles.
 
 
 
 <br>
 
 ## Study Notes
-
-
-
-*Based on Dr. Thanuja Ambegoda’s Lecture*
-
 
 ### 1. 📅 What is a Time Series? Introduction and Importance
 
@@ -216,15 +209,11 @@ Often, a Box-Cox transform is applied first to stabilize variance, followed by d
 
 ### Final Thoughts
 
-Time series data is everywhere, from weather to finance to healthcare. Understanding its components and properties is the first step toward effective forecasting and decision-making. This lecture lays the foundation by introducing key concepts, methods for detecting patterns, and techniques to prepare data for analysis.
-
 
 
 <br>
 
 ## Questions
-
-
 
 #### 1. What distinguishes a time series from a simple random variable with a known mean and standard deviation?  
 A) Time series data points are independent of each other.  
@@ -370,8 +359,6 @@ D) Autocorrelation plots are not useful for detecting cycles.
 <br>
 
 ## Answers
-
-
 
 #### 1. What distinguishes a time series from a simple random variable with a known mean and standard deviation?  
 A) ✗ Time series data points are usually dependent, not independent.  
@@ -551,4 +538,3 @@ C) ✗ Zero autocorrelation at all lags suggests white noise, often stationary.
 D) ✗ Autocorrelation plots are useful for detecting cycles as well.
 
 **Correct:** A, B, D
-

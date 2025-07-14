@@ -1,4 +1,4 @@
-## 08 NoSQL
+## 8 NoSQL
 
 [Study Notes](#study-notes)
 
@@ -7,8 +7,6 @@
 
 
 ### Key Points
-
-
 
 #### 1. 🛑 NoSQL Definition  
 - NoSQL means "Not Only SQL" and refers to any database that is **not a relational database**.  
@@ -84,8 +82,6 @@
 <br>
 
 ## Study Notes
-
-
 
 ### 1. 📚 Introduction to NoSQL Databases
 
@@ -252,8 +248,6 @@ Many traditional relational database vendors have incorporated NoSQL features to
 
 ## Questions
 
-
-
 #### 1. What does the term "NoSQL" primarily signify?  
 A) A database that completely rejects SQL and relational models  
 B) A database that is not relational or uses alternative data models  
@@ -372,15 +366,13 @@ D) It guarantees no stale data is ever read
 A) It requires applications to handle stale or out-of-date data  
 B) It eliminates the need for concurrency control  
 C) It simplifies client application logic  
-D) It forces synchronous writes to all nodes before responding  
+D) It forces synchronous writes to all nodes before responding
 
 
 
 <br>
 
 ## Answers
-
-
 
 #### 1. What does the term "NoSQL" primarily signify?  
 A) ✗ It’s not a complete rejection of SQL, but an alternative approach  
@@ -560,4 +552,3 @@ C) ✗ It complicates, not simplifies, client logic
 D) ✗ Writes are asynchronous, not forced synchronous  
 
 **Correct:** A
-
