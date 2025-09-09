@@ -1,11 +1,11 @@
-# 📌 Association Rule Mining (ARM) Cheat Sheet
+## 📌 Association Rule Mining (ARM) Cheat Sheet
 
-## 1. Key Concepts
+### 1. Key Concepts
 
 * **Frequent Pattern**: A set of items/subsequences/substructures that occur often in a dataset.
 * **Association Rule**: An implication of the form `X → Y`, where `X` and `Y` are itemsets.
 
-### Important Measures
+#### Important Measures
 
 * **Support (s)**:
 
@@ -31,7 +31,7 @@
 
 ---
 
-## 2. Applications of ARM
+### 2. Applications of ARM
 
 * Market basket analysis (beer & diapers)
 * Cross-marketing, catalog design
@@ -42,7 +42,7 @@
 
 ---
 
-## 3. The Downward Closure Property (Apriori Principle)
+### 3. The Downward Closure Property (Apriori Principle)
 
 * **Any subset of a frequent itemset must also be frequent**
 
@@ -51,9 +51,9 @@
 
 ---
 
-## 4. Major Algorithms for Frequent Pattern Mining
+### 4. Major Algorithms for Frequent Pattern Mining
 
-### **(a) Apriori Algorithm (Candidate Generation & Test)**
+#### **(a) Apriori Algorithm (Candidate Generation & Test)**
 
 1. Scan DB → find frequent 1-itemsets (L1).
 2. Generate (k+1)-candidates from Lk.
@@ -74,7 +74,7 @@
 
 ---
 
-### **(b) FP-Growth (Frequent Pattern Growth)**
+#### **(b) FP-Growth (Frequent Pattern Growth)**
 
 * Avoids candidate generation.
 * Steps:
@@ -90,7 +90,7 @@
 
 ---
 
-### **(c) Vertical Format Mining (Eclat, CHARM)**
+#### **(c) Vertical Format Mining (Eclat, CHARM)**
 
 * Uses **tid-lists (transaction ID lists)** for each itemset.
 * Support computed by intersection of tid-lists.
@@ -98,7 +98,7 @@
 
 ---
 
-## 5. Types of Association Rules
+### 5. Types of Association Rules
 
 1. **Single-level vs. Multi-level Rules**
 
@@ -123,7 +123,7 @@
 
 ---
 
-## 6. Constraint-Based ARM
+### 6. Constraint-Based ARM
 
 * Mining directed by user constraints (e.g., region, product category).
 * Constraints types:
@@ -135,7 +135,7 @@
 
 ---
 
-## 7. Interestingness Measures
+### 7. Interestingness Measures
 
 * **Support & Confidence** (basic)
 * **Lift** (correlation strength)
@@ -152,7 +152,7 @@
 
 ---
 
-## 8. Summary of ARM Algorithms
+### 8. Summary of ARM Algorithms
 
 | Algorithm              | Key Idea                           | Strengths                | Weaknesses                            |
 | ---------------------- | ---------------------------------- | ------------------------ | ------------------------------------- |
@@ -163,7 +163,7 @@
 
 ---
 
-## 9. Computational Challenges in ARM
+### 9. Computational Challenges in ARM
 
 * Huge number of patterns → need **pruning & constraints**
 * Multiple DB scans (Apriori issue)
@@ -181,9 +181,9 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 
 
-# 📌 Clustering Cheat Sheet
+## 📌 Clustering Cheat Sheet
 
-## 1. Basics of Clustering
+### 1. Basics of Clustering
 
 * **Cluster**: Group of similar objects (high intra-class similarity, low inter-class similarity).
 * **Clustering (Cluster Analysis)**: Partitioning data into meaningful groups **without predefined labels** → *unsupervised learning*.
@@ -191,7 +191,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-## 2. Quality of Clustering
+### 2. Quality of Clustering
 
 * **Good clustering**:
 
@@ -207,7 +207,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-## 3. Major Clustering Approaches
+### 3. Major Clustering Approaches
 
 * **Partitioning** (e.g., *k-means, k-medoids, CLARANS*)
 * **Hierarchical** (e.g., *AGNES, DIANA, BIRCH, CHAMELEON*)
@@ -219,9 +219,9 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-## 4. Partitioning Methods
+### 4. Partitioning Methods
 
-### **K-Means**
+#### **K-Means**
 
 * Steps:
 
@@ -243,7 +243,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-### **K-Medoids (PAM)**
+#### **K-Medoids (PAM)**
 
 * Use **medoids** (actual points) instead of centroids.
 * More robust to outliers.
@@ -253,9 +253,9 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-## 5. Hierarchical Methods
+### 5. Hierarchical Methods
 
-### **AGNES (Agglomerative)**
+#### **AGNES (Agglomerative)**
 
 * Bottom-up merging.
 * Uses linkage criteria:
@@ -265,28 +265,28 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
   * **Average-link**: avg distance
   * **Centroid/Medoid-link**
 
-### **DIANA (Divisive)**
+#### **DIANA (Divisive)**
 
 * Top-down splitting.
 
-### **Cluster Properties**
+#### **Cluster Properties**
 
 * **Centroid**: Mean of points
 * **Radius**: Avg distance to centroid
 * **Diameter**: Avg distance between all pairs
 
-### **BIRCH**
+#### **BIRCH**
 
 * Uses **CF-tree** (Clustering Feature tree).
 * CF = (N, LS, SS) where
 
-  * N = # points
+  * N = ## points
   * LS = linear sum
   * SS = squared sum
 * Scales linearly (O(n)).
 * Sensitive to data order.
 
-### **CHAMELEON**
+#### **CHAMELEON**
 
 * Graph-based clustering.
 * Two-phase:
@@ -294,16 +294,16 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
   1. Partition into many sub-clusters
   2. Merge based on **interconnectivity + closeness**.
 
-### **Probabilistic Hierarchical Clustering**
+#### **Probabilistic Hierarchical Clustering**
 
 * Uses **generative models** (e.g., Gaussian, Bernoulli).
 * Likelihood maximization → best fit.
 
 ---
 
-## 6. Density-Based Methods
+### 6. Density-Based Methods
 
-### **DBSCAN**
+#### **DBSCAN**
 
 * Parameters: **Eps (radius)**, **MinPts (density threshold)**
 * Definitions:
@@ -317,7 +317,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-### **OPTICS**
+#### **OPTICS**
 
 * Produces **cluster ordering** (visual structure of clusters).
 * Uses:
@@ -328,7 +328,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-### **DENCLUE**
+#### **DENCLUE**
 
 * Based on **statistical density functions**.
 * Defines **density attractors** (local maxima).
@@ -338,9 +338,9 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-## 7. Grid-Based Methods
+### 7. Grid-Based Methods
 
-### **STING**
+#### **STING**
 
 * Divide space into hierarchical **rectangular grids**.
 * Store **statistics per cell** (count, mean, variance, distribution).
@@ -348,7 +348,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 * **Pros**: Scalable, incremental updates.
 * **Cons**: Only detects axis-aligned clusters.
 
-### **CLIQUE**
+#### **CLIQUE**
 
 * Combines **grid-based** + **density-based**.
 * Finds **dense units** in subspaces using Apriori principle.
@@ -358,9 +358,9 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-## 8. Evaluation of Clustering
+### 8. Evaluation of Clustering
 
-### **Assessing Tendency**
+#### **Assessing Tendency**
 
 * **Hopkins Statistic (H):**
 
@@ -371,13 +371,13 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
   * H ≈ 0.5 → uniform (random)
   * H close to 0 or 1 → strong clusters
 
-### **Determining Number of Clusters**
+#### **Determining Number of Clusters**
 
 * **Empirical rule**: k ≈ √(n/2)
 * **Elbow method**: Look for inflection in SSE curve
 * **Cross-validation**: Split dataset, validate against test set
 
-### **Measuring Quality**
+#### **Measuring Quality**
 
 * **Extrinsic (supervised)**: Compare with ground truth
 
@@ -396,7 +396,7 @@ Would you like me to also make a **visual one-page PDF cheat sheet (with tables,
 
 ---
 
-# ✅ Key Takeaways
+## ✅ Key Takeaways
 
 * **K-Means**: Fast, efficient, needs k, sensitive to noise.
 * **K-Medoids**: Robust to noise, more costly.
