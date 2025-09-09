@@ -1,4 +1,4 @@
-## 3. Time Series Part 1
+## 3. Time Series I
 
 ## Key Points
 
