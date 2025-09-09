@@ -1,5 +1,64 @@
 ## Initial Value Problems
 
+## Key Points
+
+#### 1. 📐 Lipschitz Condition  
+- A function $f(t, y)$ satisfies a Lipschitz condition in $y$ on a set $D$ if there exists a constant $L > 0$ such that $|f(t, y_1) - f(t, y_2)| \leq L |y_1 - y_2|$ for all $(t, y_1), (t, y_2) \in D$.  
+- The constant $L$ is called the Lipschitz constant.  
+- If $f$ and its partial derivatives are continuous on $D$, then $f$ satisfies a Lipschitz condition on $D$.
+
+#### 2. 🔷 Convex Sets  
+- A set $D \subset \mathbb{R}^2$ is convex if for any two points $(t_1, y_1)$ and $(t_2, y_2)$ in $D$, the line segment $((1-\lambda)t_1 + \lambda t_2, (1-\lambda)y_1 + \lambda y_2)$ is also in $D$ for all $\lambda \in [0,1]$.
+
+#### 3. ✅ Existence and Uniqueness Theorem for IVPs  
+- If $f(t, y)$ is continuous on a convex set $D = [a,b] \times \mathbb{R}$ and satisfies a Lipschitz condition in $y$, then the IVP $y' = f(t,y), y(a) = y_0$ has a unique solution on $[a,b]$.
+
+#### 4. 🔒 Well-Posedness of IVPs  
+- An IVP is well-posed if:  
+  1. A unique solution exists.  
+  2. Small perturbations in the initial data or function $f$ cause only small bounded changes in the solution.  
+- If $f$ is continuous and satisfies a Lipschitz condition on $D$, then the IVP is well-posed.
+
+#### 5. 🧮 Euler’s Method  
+- Approximates solutions at discrete mesh points $t_i = a + ih$, where $h = \frac{b-a}{N}$.  
+- Recursive formula: $w_{i+1} = w_i + h f(t_i, w_i)$.  
+- Euler’s method has a local truncation error of order $h^2$ and a global error of order $h$ (first order method).  
+- Error bound depends on the Lipschitz constant $L$ and the bound on the second derivative of the true solution.
+
+#### 6. 🚀 Runge-Kutta Methods  
+- Use multiple evaluations of $f$ per step to achieve higher accuracy without computing derivatives of $f$.  
+- Midpoint method (2nd order): uses slope at midpoint for better approximation.  
+- Modified Euler method (2nd order): averages slopes at start and end of interval.  
+- Fourth order Runge-Kutta method: uses four slope evaluations per step, with global error order $h^4$.
+
+#### 7. 🔄 Multi-Step Methods  
+- Use multiple previous approximations $w_i, w_{i-1}, ..., w_{i-m+1}$ to compute $w_{i+1}$.  
+- Explicit multi-step methods: $w_{i+1}$ defined explicitly in terms of previous values (e.g., Adams-Bashforth).  
+- Implicit multi-step methods: $w_{i+1}$ appears on both sides of the equation (e.g., Adams-Moulton).
+
+#### 8. ✏️ Adams Methods  
+- Adams-Bashforth methods are explicit multi-step methods with local error order $O(h^{m+1})$ for $m$-step methods.  
+- Adams-Moulton methods are implicit multi-step methods with local error order $O(h^{m+2})$ for $m$-step methods.  
+- Adams-Bashforth $m$-step and Adams-Moulton $(m-1)$-step methods have similar computational cost and error order.
+
+#### 9. 🔄 Predictor-Corrector Methods  
+- Combine explicit (predictor) and implicit (corrector) methods to improve accuracy.  
+- Step 1: Use explicit method to predict $w_{i+1,p}$.  
+- Step 2: Use implicit method with $w_{i+1,p}$ to correct and find $w_{i+1}$.
+
+#### 10. 🧮 Numerical Solutions for Systems of IVPs  
+- Systems of first-order IVPs have the form $u_j' = f_j(t, u_1, ..., u_m)$ with initial conditions $u_j(a) = \alpha_j$.  
+- If each $f_j$ is continuous and satisfies a Lipschitz condition, the system has a unique solution.  
+- Runge-Kutta methods extend to systems by applying the method component-wise.
+
+#### 11. 🔄 Converting Higher-Order IVPs to Systems  
+- An $m$-th order IVP can be rewritten as a system of $m$ first-order IVPs by introducing new variables for derivatives.  
+- Example: For $y'' = g(t, y, y')$, define $u_1 = y$, $u_2 = y'$, then system is $u_1' = u_2$, $u_2' = g(t, u_1, u_2)$.
+
+
+
+<br>
+
 ## Study Notes
 
 ### 1. 🧩 Introduction to Initial Value Problems (IVPs)

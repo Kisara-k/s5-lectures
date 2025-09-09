@@ -1,5 +1,50 @@
 ## Steepest Descent
 
+## Key Points
+
+#### 1. 🔄 Steepest Descent Method Overview
+- Steepest descent is a modified gradient descent method used to approximate solutions to nonlinear systems.
+- It converges slowly but is tolerant of poor initial guesses.
+- Often used to find a good initial guess for faster methods like Newton’s method.
+
+#### 2. 🧮 Problem Setup
+- The system of nonlinear equations $F(x) = 0$ is transformed into minimizing $g(x) = \frac{1}{2} \|F(x)\|^2$.
+- The solution to the system corresponds to the minimum of $g(x)$, where $g(x) = 0$.
+
+#### 3. 📐 Gradient and Jacobian
+- The gradient of $g$ is given by $\nabla g(x) = J_F(x)^T F(x)$, where $J_F(x)$ is the Jacobian matrix of $F$.
+- The gradient points in the direction of the steepest increase of $g$.
+
+#### 4. ⬇️ Update Rule in Steepest Descent
+- The update formula is $x^{(k+1)} = x^{(k)} - \alpha_k \nabla g(x^{(k)})$, where $\alpha_k > 0$ is the step size.
+- The direction of steepest descent is the negative gradient $-\nabla g(x^{(k)})$.
+
+#### 5. 🎯 Step Size Selection (α)
+- The optimal step size $\hat{\alpha}$ minimizes $h(\alpha) = g(x^{(k)} - \alpha \nabla g(x^{(k)}))$.
+- Direct analytical minimization is expensive; instead, quadratic interpolation is used.
+- The interpolation uses three points $(\alpha_1, h(\alpha_1))$, $(\alpha_2, h(\alpha_2))$, and $(\alpha_3, h(\alpha_3))$ to approximate $h(\alpha)$.
+
+#### 6. 🔍 Quadratic Interpolation Steps
+- Initialize $\alpha_1 = 0$, $\alpha_3 = 1$.
+- Adjust $\alpha_3$ by bisection until $h(\alpha_3) < h(\alpha_1)$ or tolerance is reached.
+- Set $\alpha_2 = \frac{\alpha_1 + \alpha_3}{2}$.
+- Fit quadratic polynomial $P(\alpha)$ through the three points.
+- Find $\alpha_0$ minimizing $P(\alpha)$ by solving $P'(\alpha_0) = 0$.
+- Choose $\hat{\alpha}$ as the minimizer of $P(\alpha)$ in the interval $[ \alpha_1, \alpha_3 ]$.
+
+#### 7. ⚠️ Convergence Characteristics
+- Steepest descent converges slowly; it may require many iterations (e.g., 70) to get close to the solution.
+- Despite slow convergence, it is robust to initial guesses far from the solution.
+- Typically used for a few iterations to improve initial guess before applying faster methods.
+
+#### 8. 🧩 Practical Use Case
+- After one or two iterations of steepest descent, the updated point $x^{(k)}$ can serve as a good initial guess for Newton’s method.
+- Using the unit vector in the direction of the gradient instead of the raw gradient is common in practice for stability.
+
+
+
+<br>
+
 ## Study Notes
 
 ### 1. 🔍 Introduction to Steepest Descent Method

@@ -1,5 +1,60 @@
 ## Boundary Value Problems
 
+## Key Points
+
+#### 1. 📐 Boundary Value Problems (BVPs)
+- BVPs involve solving differential equations with conditions specified at two distinct points (boundaries).
+- The standard form of a two-point BVP is $y'' = f(x, y, y')$ with $y(a) = \alpha$ and $y(b) = \beta$.
+- Boundary conditions are known as boundary values, different from initial conditions in IVPs.
+
+#### 2. ✅ Existence and Uniqueness Theorem for BVPs
+- If $f$, $f_y$, and $f_{y'}$ are continuous on domain $D$, and:
+  - $f_y(x, y, y') > 0$ for all $(x, y, y') \in D$,
+  - There exists $M > 0$ such that $|f_{y'}(x, y, y')| \leq M$,
+- Then the BVP has a unique solution on $[a, b]$.
+
+#### 3. 🎯 Linear Shooting Method
+- Converts a linear BVP into two IVPs with initial conditions:
+  - $y_1(a) = \alpha, y_1'(a) = 0$
+  - $y_2(a) = 0, y_2'(a) = 1$
+- The BVP solution is $y(x) = y_1(x) + c y_2(x)$, where $c = \frac{\beta - y_1(b)}{y_2(b)}$.
+- Requires $p(x), q(x), r(x)$ continuous on $[a, b]$ and $q(x) > 0$ for existence and uniqueness.
+- Numerical IVP solutions often use the fourth-order Runge-Kutta method.
+
+#### 4. 🔄 Non-linear Shooting Method
+- Approximates the BVP solution by solving a sequence of IVPs with varying initial slopes $t_k$.
+- Uses Newton's method to solve $y(b, t) - \beta = 0$ iteratively:
+
+$$
+  t_{k+1} = t_k - \frac{y(b, t_k) - \beta}{\frac{\partial y}{\partial t}(b, t_k)}
+$$
+
+- The derivative $\frac{\partial y}{\partial t}(x, t)$ satisfies an IVP with initial conditions $z(a, t) = 0$, $z'(a, t) = 1$.
+- Iteration continues until $|y(b, t_k) - \beta|$ is sufficiently small.
+
+#### 5. 🧮 Finite Difference Method (FDM) for Linear BVPs
+- The interval $[a, b]$ is divided into $N+1$ subintervals with mesh points $x_i = a + i h$, $h = \frac{b - a}{N+1}$.
+- Centered difference approximations:
+  - $y''(x_i) \approx \frac{w_{i-1} - 2 w_i + w_{i+1}}{h^2}$
+  - $y'(x_i) \approx \frac{w_{i+1} - w_{i-1}}{2h}$
+- Leads to a tridiagonal linear system $A \mathbf{w} = \mathbf{b}$.
+- Unique solution exists if $p, q, r$ continuous, $q(x) \geq 0$, and $h < \frac{2}{L}$ where $L = \max |p(x)|$.
+
+#### 6. 🔧 Finite Difference Method for Non-linear BVPs
+- Similar mesh and difference formulas as linear case, but results in a system of nonlinear equations:
+
+$$
+  \frac{w_{i-1} - 2 w_i + w_{i+1}}{h^2} = f\left(x_i, w_i, \frac{w_{i+1} - w_{i-1}}{2h}\right)
+$$
+
+- Requires $f$, $f_y$, and $f_{y'}$ continuous; $f_y(x, y, y') \geq \delta > 0$.
+- Unique solution exists if $h < \frac{2}{L}$, with $L$ related to bounds on derivatives.
+- Newton's method is used to solve the nonlinear system iteratively.
+
+
+
+<br>
+
 ## Study Notes
 
 ### MA3024 Numerical Methods: Boundary Value Problems (BVPs) 📚
