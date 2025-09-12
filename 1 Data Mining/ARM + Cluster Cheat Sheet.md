@@ -1,0 +1,410 @@
+## 📌 Association Rule Mining (ARM) Cheat Sheet
+
+### 1. Key Concepts
+
+* **Frequent Pattern**: A set of items/subsequences/substructures that occur often in a dataset.
+* **Association Rule**: An implication of the form `X → Y`, where `X` and `Y` are itemsets.
+
+#### Important Measures
+
+* **Support (s)**:
+
+  $$
+  s(X \to Y) = \frac{\text{#(transactions containing X ∪ Y)}}{\text{total transactions}}
+  $$
+
+* **Confidence (c)**:
+
+  $$
+  c(X \to Y) = \frac{\text{Support}(X \cup Y)}{\text{Support}(X)} = P(Y|X)
+  $$
+
+* **Lift**:
+
+  $$
+  \text{Lift}(X \to Y) = \frac{c(X \to Y)}{\text{Support}(Y)}
+  $$
+
+  * **>1**: positive correlation
+  * **=1**: independent
+  * **<1**: negative correlation
+
+---
+
+### 2. Applications of ARM
+
+* Market basket analysis (beer & diapers)
+* Cross-marketing, catalog design
+* Web log (clickstream) analysis
+* Bioinformatics (DNA, drug sensitivity)
+* Classification (associative classifiers)
+* Clustering (frequent-pattern-based)
+
+---
+
+### 3. The Downward Closure Property (Apriori Principle)
+
+* **Any subset of a frequent itemset must also be frequent**
+
+  * e.g., if `{A, B, C}` is frequent → `{A, B}`, `{B, C}`, `{A, C}` must also be frequent.
+* Used for **pruning candidate itemsets**.
+
+---
+
+### 4. Major Algorithms for Frequent Pattern Mining
+
+#### **(a) Apriori Algorithm (Candidate Generation & Test)**
+
+1. Scan DB → find frequent 1-itemsets (L1).
+2. Generate (k+1)-candidates from Lk.
+3. Prune candidates using downward closure.
+4. Scan DB → count support.
+5. Repeat until no frequent itemsets remain.
+
+**Challenges**:
+
+* Multiple DB scans
+* Large candidate sets
+* Costly support counting
+
+**Optimizations**:
+
+* Partitioning: DB scan only twice.
+* Sampling: Mine from sample, verify on DB.
+
+---
+
+#### **(b) FP-Growth (Frequent Pattern Growth)**
+
+* Avoids candidate generation.
+* Steps:
+
+  1. Build **FP-Tree** (compressed DB).
+  2. Mine patterns recursively using **conditional FP-trees**.
+
+**Advantages**:
+
+* No repeated DB scans
+* Compact representation
+* Faster than Apriori (divide & conquer)
+
+---
+
+#### **(c) Vertical Format Mining (Eclat, CHARM)**
+
+* Uses **tid-lists (transaction ID lists)** for each itemset.
+* Support computed by intersection of tid-lists.
+* Efficient for dense datasets.
+
+---
+
+### 5. Types of Association Rules
+
+1. **Single-level vs. Multi-level Rules**
+
+   * Multi-level uses concept hierarchies (e.g., milk → skim milk).
+   * Requires flexible min\_support at each level.
+
+2. **Single-dimensional vs. Multi-dimensional Rules**
+
+   * Single: one predicate (buys(milk) → buys(bread))
+   * Multi: multiple predicates (age=20–25 ∧ student → buys(coke))
+
+3. **Categorical vs. Quantitative Rules**
+
+   * Categorical: finite discrete values
+   * Quantitative: numeric (age, income)
+   * Handled via discretization, clustering, gradient methods.
+
+4. **Correlation Analysis**
+
+   * Rules with high support & confidence may still be misleading.
+   * Use **lift, χ² test, correlation measures**.
+
+---
+
+### 6. Constraint-Based ARM
+
+* Mining directed by user constraints (e.g., region, product category).
+* Constraints types:
+
+  * **Knowledge-type**: classification, association, correlation
+  * **Data constraints**: SQL-like queries
+  * **Rule constraints**: min support/conf, interestingness
+  * **Dimension/level constraints**: specific hierarchy level
+
+---
+
+### 7. Interestingness Measures
+
+* **Support & Confidence** (basic)
+* **Lift** (correlation strength)
+* **Leverage**:
+
+  $$
+  \text{Lev}(X \to Y) = \text{Support}(X \cup Y) - \text{Support}(X)\times\text{Support}(Y)
+  $$
+* **Conviction**:
+
+  $$
+  \text{Conv}(X \to Y) = \frac{1 - \text{Support}(Y)}{1 - c(X \to Y)}
+  $$
+
+---
+
+### 8. Summary of ARM Algorithms
+
+| Algorithm              | Key Idea                           | Strengths                | Weaknesses                            |
+| ---------------------- | ---------------------------------- | ------------------------ | ------------------------------------- |
+| **Apriori**            | Candidate generation & pruning     | Simple, foundational     | Many DB scans, costly with large data |
+| **FP-Growth**          | Pattern growth with FP-tree        | Efficient, no candidates | Tree construction overhead            |
+| **Eclat/Charm**        | Vertical tid-lists & intersections | Fast for dense DBs       | Tid-list storage may be large         |
+| **Sampling/Partition** | Work on samples/partitions         | Reduces scans            | May miss patterns                     |
+
+---
+
+### 9. Computational Challenges in ARM
+
+* Huge number of patterns → need **pruning & constraints**
+* Multiple DB scans (Apriori issue)
+* Handling **quantitative, multidimensional, and hierarchical data**
+* Identifying **truly interesting rules**
+
+---
+
+✅ **Key Takeaway**:
+Association Rule Mining (ARM) finds **frequent patterns** and derives **associations/correlations**. While **Apriori** laid the foundation, **FP-Growth** and **vertical approaches** improved scalability. Real-world use often requires **constraint-based mining** and **interestingness measures** beyond support & confidence.
+
+---
+
+Would you like me to also make a **visual one-page PDF cheat sheet (with tables, flow diagrams, and formulas)** for quick revision?
+
+
+
+## 📌 Clustering Cheat Sheet
+
+### 1. Basics of Clustering
+
+* **Cluster**: Group of similar objects (high intra-class similarity, low inter-class similarity).
+* **Clustering (Cluster Analysis)**: Partitioning data into meaningful groups **without predefined labels** → *unsupervised learning*.
+* **Applications**: Biology (taxonomy), marketing (customer segmentation), city planning, earthquake analysis, document retrieval, preprocessing (compression, summarization, outlier detection).
+
+---
+
+### 2. Quality of Clustering
+
+* **Good clustering**:
+
+  * High **intra-cluster similarity**
+  * Low **inter-cluster similarity**
+* **Similarity / Distance measures**:
+
+  * Euclidean, Manhattan, cosine similarity (continuous data)
+  * Jaccard, Hamming (categorical/binary data)
+  * Weighted distances (application-specific)
+
+**Cluster quality functions** are often subjective.
+
+---
+
+### 3. Major Clustering Approaches
+
+* **Partitioning** (e.g., *k-means, k-medoids, CLARANS*)
+* **Hierarchical** (e.g., *AGNES, DIANA, BIRCH, CHAMELEON*)
+* **Density-based** (e.g., *DBSCAN, OPTICS, DENCLUE*)
+* **Grid-based** (e.g., *STING, WaveCluster, CLIQUE*)
+* **Model-based** (e.g., *EM, SOM, COBWEB*)
+* **Constraint/User-guided** (e.g., *COD, constrained clustering*)
+* **Link-based** (e.g., *SimRank, LinkClus*)
+
+---
+
+### 4. Partitioning Methods
+
+#### **K-Means**
+
+* Steps:
+
+  1. Initialize **k centroids**
+  2. Assign each point → nearest centroid
+  3. Update centroids = mean of cluster points
+  4. Repeat until assignments stabilize
+* **Complexity**: O(tkn) (efficient for large n)
+* **Weaknesses**:
+
+  * Sensitive to noise & outliers
+  * Only works for convex clusters
+  * Must specify k
+
+**Variants**:
+
+* **K-Modes** → categorical data
+* **K-Prototypes** → mixed data
+
+---
+
+#### **K-Medoids (PAM)**
+
+* Use **medoids** (actual points) instead of centroids.
+* More robust to outliers.
+* Complexity: O(k(n-k)²).
+* **CLARA**: Applies PAM on samples.
+* **CLARANS**: Randomized re-sampling to improve scalability.
+
+---
+
+### 5. Hierarchical Methods
+
+#### **AGNES (Agglomerative)**
+
+* Bottom-up merging.
+* Uses linkage criteria:
+
+  * **Single-link**: min distance between clusters
+  * **Complete-link**: max distance
+  * **Average-link**: avg distance
+  * **Centroid/Medoid-link**
+
+#### **DIANA (Divisive)**
+
+* Top-down splitting.
+
+#### **Cluster Properties**
+
+* **Centroid**: Mean of points
+* **Radius**: Avg distance to centroid
+* **Diameter**: Avg distance between all pairs
+
+#### **BIRCH**
+
+* Uses **CF-tree** (Clustering Feature tree).
+* CF = (N, LS, SS) where
+
+  * N = ## points
+  * LS = linear sum
+  * SS = squared sum
+* Scales linearly (O(n)).
+* Sensitive to data order.
+
+#### **CHAMELEON**
+
+* Graph-based clustering.
+* Two-phase:
+
+  1. Partition into many sub-clusters
+  2. Merge based on **interconnectivity + closeness**.
+
+#### **Probabilistic Hierarchical Clustering**
+
+* Uses **generative models** (e.g., Gaussian, Bernoulli).
+* Likelihood maximization → best fit.
+
+---
+
+### 6. Density-Based Methods
+
+#### **DBSCAN**
+
+* Parameters: **Eps (radius)**, **MinPts (density threshold)**
+* Definitions:
+
+  * **Core point**: |NEps(p)| ≥ MinPts
+  * **Directly density-reachable**: within Eps of a core point
+  * **Density-reachable**: chain of directly reachable points
+  * **Density-connected**: mutual reachability via a core point
+* **Strengths**: Arbitrary shape clusters, noise handling.
+* **Weaknesses**: Sensitive to Eps & MinPts choice.
+
+---
+
+#### **OPTICS**
+
+* Produces **cluster ordering** (visual structure of clusters).
+* Uses:
+
+  * **Core distance**: smallest radius making a point core.
+  * **Reachability distance**: max(core-dist(o), d(o,p))
+* Complexity: O(n log n) with spatial index.
+
+---
+
+#### **DENCLUE**
+
+* Based on **statistical density functions**.
+* Defines **density attractors** (local maxima).
+* Supports **arbitrary shaped clusters**.
+* Mathematically compact, faster than DBSCAN.
+* Needs many parameters.
+
+---
+
+### 7. Grid-Based Methods
+
+#### **STING**
+
+* Divide space into hierarchical **rectangular grids**.
+* Store **statistics per cell** (count, mean, variance, distribution).
+* **Top-down query processing**.
+* **Pros**: Scalable, incremental updates.
+* **Cons**: Only detects axis-aligned clusters.
+
+#### **CLIQUE**
+
+* Combines **grid-based** + **density-based**.
+* Finds **dense units** in subspaces using Apriori principle.
+* Clusters = maximal sets of connected dense units.
+* **Pros**: Works in high-dimensions, scalable.
+* **Cons**: Sensitive to grid width & density threshold.
+
+---
+
+### 8. Evaluation of Clustering
+
+#### **Assessing Tendency**
+
+* **Hopkins Statistic (H):**
+
+  $$
+  H = \frac{\sum_{i=1}^n y_i}{\sum_{i=1}^n (x_i + y_i)}
+  $$
+
+  * H ≈ 0.5 → uniform (random)
+  * H close to 0 or 1 → strong clusters
+
+#### **Determining Number of Clusters**
+
+* **Empirical rule**: k ≈ √(n/2)
+* **Elbow method**: Look for inflection in SSE curve
+* **Cross-validation**: Split dataset, validate against test set
+
+#### **Measuring Quality**
+
+* **Extrinsic (supervised)**: Compare with ground truth
+
+  * Metrics: Precision, Recall, BCubed
+* **Intrinsic (unsupervised)**: Compactness & separation
+
+  * **Silhouette coefficient (s):**
+
+    $$
+    s(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
+    $$
+
+    where
+    a(i) = avg distance of i to own cluster
+    b(i) = min avg distance of i to another cluster
+
+---
+
+## ✅ Key Takeaways
+
+* **K-Means**: Fast, efficient, needs k, sensitive to noise.
+* **K-Medoids**: Robust to noise, more costly.
+* **Hierarchical**: Dendrogram-based, O(n²), BIRCH/CHAMELEON improve scalability.
+* **Density-based (DBSCAN, OPTICS, DENCLUE)**: Arbitrary shape clusters, noise handling.
+* **Grid-based (STING, CLIQUE)**: Scalable, works in high-dimensions, but sensitive to grid.
+* **Evaluation**: Use Hopkins, silhouette, elbow, extrinsic vs intrinsic metrics.
+
+---
+
+Would you like me to **format this into a printable PDF cheat sheet with diagrams (e.g., k-means flow, dendrogram, DBSCAN reachability graph)** for easier studying?
