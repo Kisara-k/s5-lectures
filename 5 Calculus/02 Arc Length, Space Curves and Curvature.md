@@ -6,7 +6,7 @@
 - The arc length $s(\mathbf{r})$ of a curve $\mathbf{r}(t)$ over $[a,b]$ is defined as the supremum of sums of lengths of polygonal approximations:  
 
 $$
-  s(\mathbf{r}) = \sup \left\{ \sum_{k=1}^n \|\mathbf{r}(t_k) - \mathbf{r}(t_{k-1})\| \mid P = \{t_0, ..., t_n\} \right\}
+  s(\mathbf{r}) = \sup \{ \sum_{k=1}^n \|\mathbf{r}(t_k) - \mathbf{r}(t_{k-1})\| P = \{t_0, ..., t_n\} \}
 $$
 
 - A curve $\mathbf{r}$ is **rectifiable** if $s(\mathbf{r}) \in \mathbb{R}$ (finite).
